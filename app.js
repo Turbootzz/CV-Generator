@@ -1,7 +1,6 @@
-require(dotenv).config();
-
 const express = require("express");
 const path = require("path");
+// require(dotenv).config({ path: __dirname + '/.env'});
 
 const app = express();
 const PORT = 3000 || process.env.PORT;
@@ -14,5 +13,5 @@ app.use((req, res) => {
 })
 
 app.listen(3000, () => {
-    console.log("App listening on port 3000");
+    console.log(`App listening on port ${PORT}`);
 });
