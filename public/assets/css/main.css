@@ -1,0 +1,48 @@
+/* globals */
+
+:root {
+    --main-color: #DAFFFB;
+    --second-color: #176B87;
+    --third-color: #04364A;
+    --fourth-color: #64CCC5;
+}
+
+html,body{
+    height: 100%
+}
+
+/* header */
+
+body {
+    background-color: var(--main-color);
+}
+
+.navbar {
+    background-color: var(--second-color)!important;
+}
+
+.navbar-nav { 
+    margin-left: auto; 
+} 
+
+/* main */
+
+.middle-text {
+    margin: auto;
+    text-align: center;
+    padding: 200px 0; /* height */
+}
+
+/* footer */
+
+footer {
+    background-color: var(--second-color);
+}
+
+.copyright {
+    background-color: var(--third-color);
+}
+
+.text-footer {
+    color: var(--main-color);
+}
