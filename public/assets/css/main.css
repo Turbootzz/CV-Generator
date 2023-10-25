@@ -1,5 +1,7 @@
 /* globals */
 
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
 :root {
     --main-color: #DAFFFB;
     --second-color: #176B87;
@@ -8,7 +10,8 @@
 }
 
 html,body{
-    height: 100%
+    height: 100%;
+    font-family: 'Tilt Neon', sans-serif;
 }
 
 /* header */
@@ -23,14 +26,83 @@ body {
 
 .navbar-nav { 
     margin-left: auto; 
-} 
+}
+
+.nav-title {
+    font-size: 25px;
+    padding: 0;
+    color: var(--main-color);
+}
+
+.nav-text {
+    font-size: 20px;
+    padding: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: var(--main-color);
+}
+
+.nav-title:hover,.nav-text:hover {
+    color: #b1cecb;;
+}
+
+.active-light {
+    color:#bfdfdc;
+}
+
+.disabled-light {
+    color: #c3c3c372;
+}
+
+.disabled-light:hover {
+    color: #c3c3c372;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: #FFFF00;
+    color: #FFC0CB;
+}
 
 /* main */
 
 .middle-text {
     margin: auto;
     text-align: center;
-    padding: 200px 0; /* height */
+    padding: 220px 0; /* height */
+}
+
+.middle-text-title {
+    font-size: 50px;
+}
+
+.middle-text-title-gen {
+    font-size: 40px;
+}
+
+.title-btn {
+    background-color: var(--second-color);
+    border-color: var(--third-color);
+}
+
+.title-btn:hover {
+    background-color: var(--third-color);
+    border-color: black;
+}
+
+.next-btn {
+    background-color: var(--second-color);
+}
+
+.next-btn:hover {
+    background-color: var(--third-color);
+}
+
+.container-sm {
+    max-width: 700px;
+}
+
+.input-group-custom,.next-btn {
+    height: 50px;
 }
 
 /* footer */
