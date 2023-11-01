@@ -222,7 +222,7 @@ function previewImage(){
     }
 }
 
-// print CV
+// print CV or download pdf via print screen
 function printCV(){
     window.print();
 }
