@@ -3,7 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
 
 :root {
-    --main-color: #DAFFFB;
+    /* --main-color: #DAFFFB; */
+    --main-color: #f4f4eb;
     --second-color: #176B87;
     --third-color: #04364A;
     --fourth-color: #64CCC5;
@@ -87,6 +88,11 @@ body {
     font-size: 50px;
 }
 
+.middle-text-lower {
+    color: rgba(95, 95, 95, 0.664);
+    font-size: 20px;
+}
+
 .middle-text-title-gen {
     font-size: 40px;
 }
@@ -136,8 +142,8 @@ footer {
 }
 
 /* Generator page */
-#about-sc{
-    padding: 64px 0;
+.spaces-gen-page{
+    margin-top: 64px;
 }
 
 .cv-form-row-title{
