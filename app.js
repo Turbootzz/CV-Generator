@@ -13,7 +13,7 @@ app.use(express.static( __dirname + "/public"));
 
 app.set("view engine", "ejs");
 
-// adds bootstrap
+// addons
 app.use('/public/assets/css', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/css')));
 app.use('/public/assets/js', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/js')));
 app.use('/public/assets/css', express.static(path.join(__dirname, '/node_modules/bootstrap-icons/font')));
@@ -33,11 +33,13 @@ app.get('/generator', function(req, res) {
     res.render(__dirname + '/public/views/generator');
 });
 
+// not found page
 app.use((req, res) => {
     res.status(404);
-    res.sendFile( __dirname + "/public/views/404.ejs");
+    res.render(__dirname + "/public/views/404");
 });
 
+// port
 app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}`);
 });
