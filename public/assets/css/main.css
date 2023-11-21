@@ -8,6 +8,7 @@
     --second-color: #176B87;
     --third-color: #04364A;
     --fourth-color: #64CCC5;
+    --section-color: #ededed;
     --text-main: #646464;
     --text-main-dark: #000000;
     --clr-blue: #1A91F0;
@@ -20,11 +21,13 @@
     --clr-grey: #656e83;
     --clr-green: #084C41;
     --font-poppins: 'Poppins', sans-serif;
-    --font-manrope: 'Manrope', sans-serif;;
+    --font-manrope: 'Manrope', sans-serif;
+    ;
     --transition: all 300ms ease-in-out;
 }
 
-html,body{
+html,
+body {
     height: 100%;
     font-family: 'Tilt Neon', sans-serif;
 }
@@ -36,11 +39,11 @@ body {
 }
 
 .navbar {
-    background-color: var(--main-color)!important;
+    background-color: var(--main-color) !important;
 }
 
-.navbar-nav { 
-    margin-left: auto; 
+.navbar-nav {
+    margin-left: auto;
 }
 
 .nav-title {
@@ -57,12 +60,13 @@ body {
     color: var(--text-main);
 }
 
-.nav-title:hover,.nav-text:hover {
+.nav-title:hover,
+.nav-text:hover {
     color: var(--text-main-dark);
 }
 
 .active-light {
-    color:var(--text-main-dark);
+    color: var(--text-main-dark);
 }
 
 .disabled-light {
@@ -73,7 +77,8 @@ body {
     color: #4b4b4b72;
 }
 
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
     background-color: #FFFF00;
     color: #FFC0CB;
 }
@@ -83,7 +88,8 @@ body {
 .middle-text {
     margin: auto;
     text-align: center;
-    padding: 220px 0; /* height */
+    padding: 220px 0;
+    /* height */
 }
 
 .middle-text-title {
@@ -121,19 +127,50 @@ body {
     max-width: 700px;
 }
 
-.input-group-custom,.next-btn {
+.input-group-custom,
+.next-btn {
     height: 50px;
 }
 
 .spacing-bot {
-    margin-bottom: 38px;;
+    margin-bottom: 38px;
+}
+
+/* << slider difference >> */
+
+split-view {
+    width: 600px;
+    height: 400px;
+    margin: auto;
 }
 
 .second-section {
-    height: 100%;
-    width: 100%;
-    display:inline-block;
-    background:red;
+    width: 99.5vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    display: inline-block;
+    background-color: var(--section-color);
+}
+
+.card-custom {
+    border: none;
+}
+
+.card-body-custom {
+    background-color: var(--section-color);
+}
+
+.card-title-custom {
+    color: var(--text-main-dark);
+    font-size: 22px;
+}
+
+.card-text-custom {
+    color: var(--text-main);
+    font-size: 18px;
 }
 
 /* footer */
@@ -161,38 +198,44 @@ footer {
     margin-bottom: 2rem;
 }
 
-.cv-form-row-title h3{
+.cv-form-row-title h3 {
     color: var(--clr-white);
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-size: 1.7rem;
 }
-.cv-form-blk{
+
+.cv-form-blk {
     margin: 3rem 0;
 }
-.cv-form-row{
+
+.cv-form-row {
     padding: 3rem 2rem 0 2rem;
     border: 1px solid rgba(0, 0, 0, 0.08);
     margin-bottom: 1rem;
     position: relative;
     background-color: white;
 }
-textarea{
+
+textarea {
     resize: none;
 }
-.form-elem{
+
+.form-elem {
     margin-bottom: 3rem;
     position: relative;
 }
-.form-label{
+
+.form-label {
     display: block;
     font-weight: 600;
     font-size: 14px;
     color: var(--clr-dark);
     margin-bottom: 0.5rem;
 }
-.form-control{
+
+.form-control {
     border-radius: none;
     border: 1px solid rgba(0, 0, 0, 0.1);
     font-size: 14px;
@@ -203,10 +246,11 @@ textarea{
     transition: var(--transition);
 }
 
-.form-control:focus{
+.form-control:focus {
     border-color: rgba(0, 0, 0, 0.3);
 }
-.form-text{
+
+.form-text {
     color: #ca0b00;
     font-size: 12px;
     position: absolute;
@@ -215,10 +259,13 @@ textarea{
     left: 0;
     width: 100%;
 }
-.cols-3, .cols-2{
+
+.cols-3,
+.cols-2 {
     display: grid;
 }
-.repeater-add-btn{
+
+.repeater-add-btn {
     /* width: 25px;
     height: 25px; */
     background-color: var(--clr-blue-mid);
@@ -226,7 +273,8 @@ textarea{
     color: var(--clr-white);
     /* margin: 1rem 0; */
 }
-.repeater-remove-btn{
+
+.repeater-remove-btn {
     position: absolute;
     top: 10px;
     right: 10px;
