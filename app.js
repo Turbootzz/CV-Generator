@@ -33,6 +33,11 @@ app.get('/generator', function(req, res) {
     res.render(__dirname + '/public/views/generator');
 });
 
+// feedback page
+app.get('/feedback', function(req, res) {
+    res.render(__dirname + '/public/views/feedback');
+});
+
 // not found page
 app.use((req, res) => {
     res.status(404);

@@ -364,7 +364,7 @@ textarea {
 
 /* template 1 */
 @import "template1.css";
-@import url("/public/assets/css/template1.css");
+/* @import url("/public/assets/css/template1.css"); */
 
 /* template 2 */
 @import "template2.css";
