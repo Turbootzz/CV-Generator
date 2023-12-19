@@ -93,6 +93,13 @@ body {
     /* height */
 }
 
+.middle-text-small {
+    margin: auto;
+    text-align: center;
+    padding: 120px 0;
+    /* height */
+}
+
 .middle-text-title {
     font-size: 50px;
 }
@@ -135,6 +142,10 @@ body {
 
 .spacing-bot {
     margin-bottom: 38px;
+}
+
+.spacing-bot-small {
+    margin-bottom: 8px;
 }
 
 /* CSS */
@@ -362,6 +373,9 @@ textarea {
     /* font-size: 1.6rem; */
 }
 
+.templates {
+    margin-top: -64px;
+}
 
 /* template 1 */
 @import "template1.css";
@@ -369,3 +383,20 @@ textarea {
 
 /* template 2 */
 @import "template2.css";
+
+/* feedback page */
+
+.feedback-form {
+    text-align: left;
+}
+
+.tab-feedback-button {
+    --bs-nav-tabs-link-active-bg: #dcdcdc;
+    --bs-nav-link-color: var(--text-main);
+    --bs-nav-link-hover-color: var(--text-main-dark);
+    --bs-nav-tabs-border-width: var(--bs-border-width);
+    --bs-nav-tabs-border-color: var(--second-color);
+    --bs-nav-tabs-border-radius: var(--bs-border-radius);
+    --bs-nav-tabs-link-hover-border-color: var(--bs-secondary-bg) var(--bs-secondary-bg) var(--third-color);
+    --bs-nav-tabs-link-active-border-color: var(--bs-border-color) var(--bs-border-color) var(--third-color);
+}

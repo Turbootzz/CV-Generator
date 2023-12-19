@@ -20,6 +20,7 @@ app.use('/public/assets/css', express.static(path.join(__dirname, '/node_modules
 app.use('/public/assets/img/icons', express.static(path.join(__dirname, '/node_modules/bootstrap-icons/icons')));
 app.use('/public/assets/js', express.static(path.join(__dirname, '/node_modules/jquery/dist')));
 app.use('/public/assets/js', express.static(path.join(__dirname, '/node_modules/jquery.repeaster')));
+app.use('/public/assets/js', express.static(path.join(__dirname, '/node_modules/@emailjs/dist')));
 
 app.use(favicon(path.join(__dirname, '/public/assets/img', 'favicon.ico')));
 
