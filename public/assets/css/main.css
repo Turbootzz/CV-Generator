@@ -287,9 +287,9 @@ footer {
 .cv-form-row-title h3 {
     color: var(--clr-white);
     font-weight: 500;
-    text-transform: uppercase;
     letter-spacing: 1.5px;
     font-size: 1.7rem;
+    line-height: normal;
 }
 
 .cv-form-blk {
