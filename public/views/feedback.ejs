@@ -21,11 +21,11 @@
                                       <br>
                                       <div class="tab-content" id="nav-tabContent">
                                         <div class="tab-pane fade show active" id="nav-feedback" role="tabpanel" aria-labelledby="nav-feedback-tab">
-                                                <form class="feedback-form row" id="feedback-form-complete">
+                                                <form class="feedback-form row" id="feedback-form-complete" method="POST">
                                                         <div class="mb-4">
                                                                 <label for="paginaformcontrol" class="form-label">Kies een
                                                                         pagina</label>
-                                                                <select class="form-select" id="pagina" aria-label="Kies een pagina">
+                                                                <select class="form-select" id="pagina" aria-label="Kies een pagina" name="pagina">
                                                                         <option selected>Open om te kiezen</option>
                                                                         <option value="Homepage">Homepage</option>
                                                                         <option value="Generator">Generator</option>
@@ -36,17 +36,17 @@
                                                         <div class="mb-4">
                                                                 <label for="emailformcontrol" class="form-label">Email address</label>
                                                                 <input type="email" class="form-control" id="emailinput"
-                                                                        placeholder="naam@voorbeeld.nl">
+                                                                        placeholder="naam@voorbeeld.nl" name="email">
                                                         </div>
                                                         <div class="mb-4">
                                                                 <label for="nameformcontrol" class="form-label">Naam</label>
                                                                 <input type="text" class="form-control" id="nameinput"
-                                                                        placeholder="Voornaam en achternaam">
+                                                                        placeholder="Voornaam en achternaam" name="naam">
                                                         </div>
                                                         <div class="mb-4">
                                                                 <label for="textformcontrol" class="form-label">Uw feedback</label>
                                                                 <textarea class="form-control" id="feedbackmessage"
-                                                                        rows="3"></textarea>
+                                                                        rows="3" name="feedback"></textarea>
                                                         </div>
                                                         <div class="col-12">
                                                                 <button onclick="sendMail()" type="submit" class="btn btn-primary">Verzend</button>
@@ -54,11 +54,11 @@
                                                 </form>
                                         </div>
                                         <div class="tab-pane fade" id="nav-feedback-ano" role="tabpanel" aria-labelledby="nav-feedback-ano-tab">
-                                                <form class="feedback-form row" id="feedback-ano-form-complete">
+                                                <form class="feedback-form row" id="feedback-ano-form-complete" method="POST">
                                                         <div class="mb-4">
                                                                 <label for="paginaformcontrol" class="form-label">Kies een
                                                                         pagina</label>
-                                                                <select class="form-select" aria-label="Kies een pagina">
+                                                                <select class="form-select" id="pagina-ano" aria-label="Kies een pagina" name="pagina">
                                                                         <option selected>Open om te kiezen</option>
                                                                         <option value="Homepage">Homepage</option>
                                                                         <option value="Generator">Generator</option>
@@ -68,11 +68,11 @@
                                                         </div>
                                                         <div class="mb-4">
                                                                 <label for="textformcontrol" class="form-label">Uw feedback</label>
-                                                                <textarea class="form-control" id="exampleFormControlTextarea1"
-                                                                        rows="3"></textarea>
+                                                                <textarea class="form-control" id="feedbackmessage-ano"
+                                                                        rows="3" name="feedback"></textarea>
                                                         </div>
                                                         <div class="col-12">
-                                                                <button onclick="sendMail()" type="submit" class="btn btn-primary">Verzend</button>
+                                                                <button onclick="sendMailano()" type="submit" class="btn btn-primary">Verzend</button>
                                                               </div>
                                                 </form>
                                                 <br>

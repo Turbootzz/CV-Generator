@@ -5,9 +5,34 @@ const app = express();
 const { JSDOM } = require( "jsdom" );
 const { window } = new JSDOM( "" );
 const $ = require( "jquery" )( window );
+const cors = require('cors');
+const multer = require('multer');
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const PORT = 3000 || process.env.PORT;
 var favicon = require('serve-favicon');
+
+app.use(cors()); // Allows request from any IP (prevent any CORS error)
+
+const storage = multer.diskStorage({
+    destination: function (req, file, callback) {
+        callback(null, __dirname + '/feedback-data');
+    },
+    filename: function (req, file, callback) {
+       // You can write your own logic to define the filename here (before passing it into the callback), e.g:
+       console.log(file.originalname); // User-defined filename is available
+       const filename = `file_${crypto.randomUUID()}`; // Create custom filename (crypto.randomUUID available in Node 19.0.0+ only)
+       callback(null, filename);
+    }
+  })
+
+  const upload = multer({ 
+    storage: storage,
+    limits: {
+       fileSize: 1048576 // Defined in bytes (1 Mb)
+    }, 
+ })
 
 app.use(express.static( __dirname + "/public"));
 
@@ -38,6 +63,13 @@ app.get('/generator', function(req, res) {
 app.get('/feedback', function(req, res) {
     res.render(__dirname + '/public/views/feedback');
 });
+app.post('/feedback', upload.any(), function (req, res) {
+    console.log(req.body); // Text input
+    console.log(req.files); // Metadata about uploaded files (if any)
+});
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+
 
 // not found page
 app.use((req, res) => {
