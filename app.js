@@ -5,6 +5,7 @@ const app = express();
 const { JSDOM } = require( "jsdom" );
 const { window } = new JSDOM( "" );
 const $ = require( "jquery" )( window );
+const router = express.Router();
 const cors = require('cors');
 const multer = require('multer');
 const bodyParser = require('body-parser');
@@ -33,6 +34,9 @@ const storage = multer.diskStorage({
        fileSize: 1048576 // Defined in bytes (1 Mb)
     }, 
  })
+
+ const pdfRoute = require('./routes/pdf');
+ app.use('/pdf', pdfRoute);
 
 app.use(express.static( __dirname + "/public"));
 

@@ -143,3 +143,5 @@ $('#change-template2').click(function () {
 $('#change-template3').click(function () {
     $result.load('../../views/partials/template3.ejs');
 });
+
+// generate PDF
