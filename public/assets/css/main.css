@@ -1,6 +1,6 @@
 /* globals */
-
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap'); /* default */
 
 :root {
     /* --main-color: #DAFFFB; */
@@ -29,7 +29,8 @@
 html,
 body {
     height: 100%;
-    font-family: 'Tilt Neon', sans-serif;
+    /* font-family: 'Tilt Neon', sans-serif; */
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* header */
