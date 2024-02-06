@@ -282,7 +282,7 @@ footer {
 .cv-form-row-title {
     background-color: var(--clr-dark);
     padding: 0.8rem 1.6rem;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */ /* spacing van section titel */
 }
 
 .cv-form-row-title h3 {
