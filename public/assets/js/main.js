@@ -107,41 +107,52 @@ window.customElements.define("split-view", SplitView);
 
 // form repeater
 $(document).ready(function () {
-    $('.repeater').repeater({
-        initEmpty: false,
-        defaultValues: {
-            'text-input': ''
-        },
-        show: function () {
-            $(this).slideDown();
-        },
-        hide: function (deleteElement) {
-            $(this).slideUp(deleteElement);
-            setTimeout(() => {
-                generateCV();
-            }, 500);
-        },
-        isFirstItemUndeletable: true
-    })
+  $('.repeater').repeater({
+    initEmpty: false,
+    defaultValues: {
+      'text-input': ''
+    },
+    show: function () {
+      $(this).slideDown();
+    },
+    hide: function (deleteElement) {
+      $(this).slideUp(deleteElement);
+      setTimeout(() => {
+        generateCV();
+      }, 500);
+    },
+    isFirstItemUndeletable: true
+  })
 })
 
 function reloadJs(src) {
-    src = $('script[src$="' + src + '"]').attr("src");
-    $('script[src$="' + src + '"]').remove();
-    $('<script/>').attr('src', src).appendTo('head');
+  src = $('script[src$="' + src + '"]').attr("src");
+  $('script[src$="' + src + '"]').remove();
+  $('<script/>').attr('src', src).appendTo('head');
 }
 
 // choose template
 var $result = $('#result');
 $('#change-template1').click(function () {
-    $result.load('../../views/partials/template1.ejs');
-    reloadJs('assets/js/generator.js');
+  $result.load('../../views/partials/template1.ejs');
+  reloadJs('assets/js/generator.js');
 });
 $('#change-template2').click(function () {
-    $result.load('../../views/partials/template2.ejs');
+  $result.load('../../views/partials/template2.ejs');
 });
 $('#change-template3').click(function () {
-    $result.load('../../views/partials/template3.ejs');
+  $result.load('../../views/partials/template3.ejs');
 });
 
 // generate PDF
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector('#btn-one').addEventListener('click', function () {
+    html2canvas(document.querySelector('#div-to-print-pdf')).then((canvas) => {
+      let base64image = canvas.toDataURL('image/png');
+      // console.log(base64image);
+      let pdf = new jsPDF('p', 'px', [900, 636]);
+      pdf.addImage(base64image, 'PNG', 0, 0); // margin left, margin top, width, height van doc
+      pdf.save('pb-cv.pdf');
+    });
+  });
+});

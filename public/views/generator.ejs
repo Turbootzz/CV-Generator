@@ -5,7 +5,7 @@
             <section id="about-sc" class="spaces-gen-page">
                 <div class="container">
                     <div class="about-cnt">
-                        <form action="" class="cv-form" id="cv-form">
+                        <form action="" class="cv-form" id="cv-form" method="GET">
                             <div class="cv-form-blk">
                                 <div class="cv-form-row-title">
                                     <h3>Over mij</h3>
@@ -15,19 +15,19 @@
                                         <div class="form-elem">
                                             <label for="" class="form-label">Voornaam:</label>
                                             <input name="firstname" type="text" class="form-control firstname" id=""
-                                                onkeyup="generateCV()" placeholder="bijv. Henk">
+                                                onkeyup="generateCV()" placeholder="bijv. Henk" value="">
                                             <span class="form-text"></span>
                                         </div>
                                         <div class="form-elem">
                                             <label for="" class="form-label">Tussenvoegsel:</label>
                                             <input name="middlename" type="text" class="form-control middlename" id=""
-                                                onkeyup="generateCV()" placeholder="bijv. van">
+                                                onkeyup="generateCV()" placeholder="bijv. van" value="">
                                             <span class="form-text"></span>
                                         </div>
                                         <div class="form-elem">
                                             <label for="" class="form-label">Achternaam:</label>
                                             <input name="lastname" type="text" class="form-control lastname" id=""
-                                                onkeyup="generateCV()" placeholder="bijv. Plaus">
+                                                onkeyup="generateCV()" placeholder="bijv. Plaus" value="">
                                             <span class="form-text"></span>
                                         </div>
                                     </div>
@@ -326,6 +326,15 @@
             <!-- <button id="change-template1">Eerste Template</button>
             <button id="change-template2">Tweede Template</button>
             <button id="change-template3">Derde Template</button> -->
+            <br>
+            <button id="btn-one" class="btn btn-success btn-lg">Download als PDF</button>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+			integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
     <%- include('partials/footer'); %>
