@@ -275,12 +275,20 @@ footer {
 }
 
 /* Generator page */
+.tab-rounded-top {
+    border-radius: 25px 25px 0 0;
+}
+
+.tab-rounded-bottom {
+    border-radius: 0 0 25px 25px;
+}
+
 .spaces-gen-page {
     margin-top: 64px;
 }
 
 .cv-form-row-title {
-    background-color: var(--clr-dark);
+    background-color: var(--second-color);
     padding: 0.8rem 1.6rem;
     /* margin-bottom: 2rem; */ /* spacing van section titel */
 }
@@ -400,4 +408,8 @@ textarea {
     --bs-nav-tabs-border-radius: var(--bs-border-radius);
     --bs-nav-tabs-link-hover-border-color: var(--bs-secondary-bg) var(--bs-secondary-bg) var(--third-color);
     --bs-nav-tabs-link-active-border-color: var(--bs-border-color) var(--bs-border-color) var(--third-color);
+}
+
+@media screen and (max-width: 991px) {
+    /* navbar fix coming */
 }
