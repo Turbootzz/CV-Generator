@@ -5,8 +5,8 @@
             <section id="about-sc" class="spaces-gen-page">
                 <div class="container">
                     <div class="about-cnt">
-                        <form action="" class="cv-form" id="cv-form" method="GET">
-                            <div class="cv-form-blk">
+                        <form action="" class="cv-form" id="cv-form regForm" method="GET">
+                            <div class="cv-form-blk tab">
                                 <div class="cv-form-row-title tab-rounded-top">
                                     <h3>Over mij</h3>
                                 </div>
@@ -14,7 +14,7 @@
                                     <div class="cols-3">
                                         <div class="form-elem">
                                             <label for="" class="form-label">Voornaam:</label>
-                                            <input name="firstname" type="text" class="form-control firstname" id=""
+                                            <input name="firstname" type="text" class="form-control firstname input-steps" id=""
                                                 onkeyup="generateCV()" placeholder="bijv. Henk" value="">
                                             <span class="form-text"></span>
                                         </div>
@@ -26,7 +26,7 @@
                                         </div>
                                         <div class="form-elem">
                                             <label for="" class="form-label">Achternaam:</label>
-                                            <input name="lastname" type="text" class="form-control lastname" id=""
+                                            <input name="lastname" type="text" class="form-control lastname input-steps" id=""
                                                 onkeyup="generateCV()" placeholder="bijv. Plaus" value="">
                                             <span class="form-text"></span>
                                         </div>
@@ -35,18 +35,18 @@
                                     <div class="cols-3">
                                         <div class="form-elem">
                                             <label for="" class="form-label">Een profielfoto:</label>
-                                            <input name="image" type="file" class="form-control image" id=""
+                                            <input name="image" type="file" class="form-control image input-steps" id=""
                                                 accept="image/*" onchange="previewImage()">
                                         </div>
                                         <div class="form-elem">
                                             <label for="" class="form-label">Wat ben je?</label>
-                                            <input name="designation" type="text" class="form-control designation" id=""
+                                            <input name="designation" type="text" class="form-control designation input-steps" id=""
                                                 onkeyup="generateCV()" placeholder="bijv. Accountant">
                                             <span class="form-text"></span>
                                         </div>
                                         <div class="form-elem">
                                             <label for="" class="form-label">Adres:</label>
-                                            <input name="address" type="text" class="form-control address" id=""
+                                            <input name="address" type="text" class="form-control address input-steps" id=""
                                                 onkeyup="generateCV()" placeholder="bijv. Steen 13, Houten">
                                             <span class="form-text"></span>
                                         </div>
@@ -55,19 +55,19 @@
                                     <div class="cols-3">
                                         <div class="form-elem">
                                             <label for="" class="form-label">Email:</label>
-                                            <input name="email" type="text" class="form-control email" id=""
+                                            <input name="email" type="text" class="form-control email input-steps" id=""
                                                 onkeyup="generateCV()" placeholder="bijv. henk@gmail.com">
                                             <span class="form-text"></span>
                                         </div>
                                         <div class="form-elem">
                                             <label for="" class="form-label">Telefoon nummer:</label>
-                                            <input name="phoneno" type="text" class="form-control phoneno" id=""
+                                            <input name="phoneno" type="text" class="form-control phoneno input-steps" id=""
                                                 onkeyup="generateCV()" placeholder="bijv. 06 12345678, +31 6 12345678">
                                             <span class="form-text"></span>
                                         </div>
                                         <div class="form-elem">
                                             <label for="" class="form-label">Over jou:</label>
-                                            <input name="summary" type="text" class="form-control summary" id=""
+                                            <input name="summary" type="text" class="form-control summary input-steps" id=""
                                                 onkeyup="generateCV()" placeholder="Ik hou van taart.">
                                             <span class="form-text"></span>
                                         </div>
@@ -75,7 +75,7 @@
                                 </div>
                             </div>
 
-                            <div class="cv-form-blk">
+                            <div class="cv-form-blk tab">
                                 <div class="cv-form-row-title tab-rounded-top">
                                     <h3>Behaalde doelen</h3>
                                 </div>
@@ -112,7 +112,7 @@
                                 </div>
                             </div>
 
-                            <div class="cv-form-blk">
+                            <div class="cv-form-blk tab">
                                 <div class="cv-form-row-title tab-rounded-top">
                                     <h3>Ervaring</h3>
                                 </div>
@@ -180,7 +180,7 @@
                                 </div>
                             </div>
 
-                            <div class="cv-form-blk">
+                            <div class="cv-form-blk tab">
                                 <div class="cv-form-row-title tab-rounded-top">
                                     <h3>Onderwijs</h3>
                                 </div>
@@ -248,7 +248,7 @@
                                 </div>
                             </div>
 
-                            <div class="cv-form-blk">
+                            <div class="cv-form-blk tab">
                                 <div class="cv-form-row-title tab-rounded-top">
                                     <h3>Projecten</h3>
                                 </div>
@@ -289,7 +289,7 @@
                                 </div>
                             </div>
 
-                            <div class="cv-form-blk">
+                            <div class="cv-form-blk tab">
                                 <div class="cv-form-row-title tab-rounded-top">
                                     <h3>Skills</h3>
                                 </div>
@@ -314,6 +314,18 @@
                                         class="repeater-add-btn">+</button>
                                 </div>
                             </div>
+                            <div style="overflow:auto;">
+                                <div style="float:right;">
+                                  <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                                  <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                                </div>
+                              </div>
+                            <div style="text-align:center;margin-top:40px;">
+                                <span class="step"></span>
+                                <span class="step"></span>
+                                <span class="step"></span>
+                                <span class="step"></span>
+                              </div>
                         </form>
                     </div>
                 </div>
