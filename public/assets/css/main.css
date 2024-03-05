@@ -194,6 +194,50 @@ body {
     fill: #06f;
 }
 
+.button-custom-sec {
+    align-items: center;
+    background-color: var(--second-color);
+    border: 1px solid var(--third-color);
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    fill: #000;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: -.8px;
+    line-height: 24px;
+    min-width: 140px;
+    outline: 0;
+    padding: 0 17px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-custom-sec:focus {
+    color: #171e29;
+}
+
+.button-custom-sec:hover {
+    background-color: var(--third-color);
+    border-color: var(--third-color);
+    fill: var(--third-color);
+}
+
+.button-custom-sec:active {
+    background-color: var(--third-color);
+    border-color: var(--third-color);
+    fill: var(--third-color);
+}
+
+
 @media (min-width: 768px) {
     .button-custom {
         min-width: 170px;
@@ -388,14 +432,6 @@ textarea {
     margin-top: -64px;
 }
 
-/* form steps */
-#regForm {
-    background-color: #ffffff;
-    margin: 100px auto;
-    padding: 40px;
-    width: 70%;
-    min-width: 300px;
-}
 
 /* Style the input fields */
 .input-steps {
@@ -435,7 +471,7 @@ textarea {
 
 /* Mark the steps that are finished and valid: */
 .step.finish {
-    background-color: #04AA6D;
+    background-color: var(--second-color);
 }
 
 /* template 1 */
