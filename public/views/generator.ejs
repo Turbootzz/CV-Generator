@@ -14,7 +14,8 @@
                                     <div class="cols-3">
                                         <div class="form-elem">
                                             <label for="" class="form-label">Voornaam:</label>
-                                            <input name="firstname" type="text" class="form-control firstname input-steps" id=""
+                                            <!-- input-steps class for required -->
+                                            <input name="firstname" type="text" class="form-control firstname" id=""
                                                 onkeyup="generateCV()" placeholder="bijv. Henk" value="">
                                             <span class="form-text"></span>
                                         </div>
@@ -26,7 +27,7 @@
                                         </div>
                                         <div class="form-elem">
                                             <label for="" class="form-label">Achternaam:</label>
-                                            <input name="lastname" type="text" class="form-control lastname input-steps" id=""
+                                            <input name="lastname" type="text" class="form-control lastname" id=""
                                                 onkeyup="generateCV()" placeholder="bijv. Plaus" value="">
                                             <span class="form-text"></span>
                                         </div>
@@ -35,18 +36,18 @@
                                     <div class="cols-3">
                                         <div class="form-elem">
                                             <label for="" class="form-label">Een profielfoto:</label>
-                                            <input name="image" type="file" class="form-control image input-steps" id=""
+                                            <input name="image" type="file" class="form-control image" id=""
                                                 accept="image/*" onchange="previewImage()">
                                         </div>
                                         <div class="form-elem">
                                             <label for="" class="form-label">Wat ben je?</label>
-                                            <input name="designation" type="text" class="form-control designation input-steps" id=""
+                                            <input name="designation" type="text" class="form-control designation" id=""
                                                 onkeyup="generateCV()" placeholder="bijv. Accountant">
                                             <span class="form-text"></span>
                                         </div>
                                         <div class="form-elem">
                                             <label for="" class="form-label">Adres:</label>
-                                            <input name="address" type="text" class="form-control address input-steps" id=""
+                                            <input name="address" type="text" class="form-control address" id=""
                                                 onkeyup="generateCV()" placeholder="bijv. Steen 13, Houten">
                                             <span class="form-text"></span>
                                         </div>
@@ -55,19 +56,19 @@
                                     <div class="cols-3">
                                         <div class="form-elem">
                                             <label for="" class="form-label">Email:</label>
-                                            <input name="email" type="text" class="form-control email input-steps" id=""
+                                            <input name="email" type="text" class="form-control email" id=""
                                                 onkeyup="generateCV()" placeholder="bijv. henk@gmail.com">
                                             <span class="form-text"></span>
                                         </div>
                                         <div class="form-elem">
                                             <label for="" class="form-label">Telefoon nummer:</label>
-                                            <input name="phoneno" type="text" class="form-control phoneno input-steps" id=""
+                                            <input name="phoneno" type="text" class="form-control phoneno" id=""
                                                 onkeyup="generateCV()" placeholder="bijv. 06 12345678, +31 6 12345678">
                                             <span class="form-text"></span>
                                         </div>
                                         <div class="form-elem">
                                             <label for="" class="form-label">Over jou:</label>
-                                            <input name="summary" type="text" class="form-control summary input-steps" id=""
+                                            <input name="summary" type="text" class="form-control summary" id=""
                                                 onkeyup="generateCV()" placeholder="Ik hou van taart.">
                                             <span class="form-text"></span>
                                         </div>
@@ -316,11 +317,12 @@
                             </div>
                             <div style="overflow:auto;">
                                 <div style="float:right;">
-                                  <button type="button" class="button-custom-sec" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-                                  <button type="button" class="button-custom-sec" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                                  <button type="button" class="button-custom-sec" id="prevBtn" onclick="nextPrev(-1)">Vorige</button>
+                                  <button type="button" class="button-custom-sec" id="nextBtn" onclick="nextPrev(1)">Volgende</button>
                                 </div>
                               </div>
                             <div style="text-align:center;margin-top:40px;">
+                                <span class="step"></span>
                                 <span class="step"></span>
                                 <span class="step"></span>
                                 <span class="step"></span>
