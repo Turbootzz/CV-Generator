@@ -226,3 +226,16 @@ function previewImage(){
 function printCV(){
     window.print();
 }
+
+// cv changes
+
+// template1
+function btnRed() {
+    document.getElementsByClassName('preview-cnt-l')[0]
+            .style.backgroundColor = 'darkred';
+        }
+
+function btnBlue() {
+    document.getElementsByClassName('preview-cnt-l')[0]
+            .style.backgroundColor = 'var(--second-color)';
+        }

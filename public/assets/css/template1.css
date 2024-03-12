@@ -10,7 +10,7 @@
 
 .preview-cnt-l{
     padding: 3rem 3rem 2rem 3rem;
-    background-color: var(--second-color) !important;
+    background-color: var(--second-color);
 }
 .preview-cnt-r{
     padding: 3rem 3rem 3rem 4rem;
