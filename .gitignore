@@ -4,3 +4,5 @@ node_modules/
 img
 
 /public/assets/js/jquery.repeater.js
+
+package-lock.json
