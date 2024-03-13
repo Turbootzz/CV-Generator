@@ -34,9 +34,19 @@ app.get('/', (req, res) => {
     res.render(__dirname + '/public/views/index')
 });
   
+// templates page
+app.get('/templates', function(req, res) {
+    res.render(__dirname + '/public/views/templates');
+});
+
 // generator page
 app.get('/generator', function(req, res) {
     res.render(__dirname + '/public/views/generator');
+});
+
+// generator2 page
+app.get('/generator2', function(req, res) {
+    res.render(__dirname + '/public/views/generator2');
 });
 
 // feedback page
