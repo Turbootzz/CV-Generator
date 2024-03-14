@@ -144,18 +144,24 @@ $('#change-template3').click(function () {
   $result.load('../../views/partials/template3.ejs');
 });
 
+let cv = document.querySelector('#div-to-print-pdf');
+  let pageWidth = cv.clientWidth;
+  let pageHeight = cv.clientHeight;
+
 // generate PDF
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelector('#btn-one').addEventListener('click', function () {
     html2canvas(document.querySelector('#div-to-print-pdf')).then((canvas) => {
-      let base64image = canvas.toDataURL('image/png');
+      let base64image = canvas.toDataURL('image/jpeg');
       // console.log(base64image);
-      let pdf = new jsPDF('p', 'px', [900, 636]);
-      pdf.addImage(base64image, 'PNG', 0, 0); // margin left, margin top, width, height van doc
+      // let pdf = new jsPDF('p', 'px', [900, 636]);
+      let pdf = new jsPDF('p', 'px', [pageWidth, pageHeight]);
+      pdf.addImage(base64image, 'JPEG', 3, 3); // margin left, margin top, width, height van doc
       pdf.save('pb-cv.pdf');
     });
   });
 });
+console.log(pageWidth, pageHeight)
 
 // Generator form steps
 

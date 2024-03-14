@@ -30,8 +30,8 @@
 }
 .preview-image{
     margin-top: -16px;
-    width: 215px;
-    height: 215px;
+    width: 100%;
+    height: 220px;
     overflow: hidden;
     /* margin-right: auto;
     margin-left: auto; */
@@ -42,11 +42,17 @@
     object-fit: cover;
 }
 .preview-item-name{
-    font-size: 2.4rem;
+    font-size: 1.4rem;
     font-weight: 600;
     margin: 1.8rem 0;
     position: relative;
 }
+
+/* .name-over-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+} */
 
 .preview-item {
     margin: auto;
@@ -58,9 +64,13 @@
     bottom: -10px;
     width: 50px;
     height: 1.5px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     left: 50%;
     transform: translateX(-50%);
+}
+
+.space-bot {
+    margin-bottom: -29px;
 }
 .preview-blk{
     padding: 1rem 0;
@@ -72,17 +82,20 @@
     letter-spacing: 0.5px;
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.08);
     padding-bottom: 0.5rem;
-    padding-top: 5px;
+    padding-top: 9px;
     background-color: rgb(60, 60, 60);
     color: var(--cv-main);
+    font-size: 1.4rem;
 }
 .preview-blk-title{
     margin-bottom: 1rem;
 }
 .preview-blk-list .preview-item{
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 0.2rem;
     opacity: 0.95;
+    text-align: left;
+    padding-left: 1.4rem;
 }
 .preview-cnt-r .preview-blk-title{
     color: var(--clr-dark);
@@ -96,9 +109,9 @@
 .experiences-items.preview-blk-list .preview-item span:first-child,
 .projects-items.preview-blk-list .preview-item span:first-child{
     display: block;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 1rem;
-    background-color: rgba(0, 0, 0, 0.03);
+    /* background-color: rgba(0, 0, 0, 0.03); */
 }
 
 .educations-items.preview-blk-list .preview-item span:nth-child(2),
