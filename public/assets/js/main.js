@@ -145,23 +145,37 @@ $('#change-template3').click(function () {
 });
 
 let cv = document.querySelector('#div-to-print-pdf');
-  let pageWidth = cv.clientWidth;
-  let pageHeight = cv.clientHeight;
+let pageWidth = cv.clientWidth; // Assuming you want div's width
+let pageHeight = cv.clientHeight; // Assuming you want div's height
 
-// generate PDF
+// Unit check (adjust based on your default unit)
+let unit = 'px'; // Change to 'mm' or 'cm' if needed
+
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelector('#btn-one').addEventListener('click', function () {
     html2canvas(document.querySelector('#div-to-print-pdf')).then((canvas) => {
+      function getDivHeight() {
+        // Consider adding padding/border if needed
+        return cv.scrollHeight + parseInt(getComputedStyle(cv).paddingTop) + parseInt(getComputedStyle(cv).paddingBottom);
+      }
+      let pageHeight = getDivHeight();
       let base64image = canvas.toDataURL('image/jpeg');
-      // console.log(base64image);
-      // let pdf = new jsPDF('p', 'px', [900, 636]);
-      let pdf = new jsPDF('p', 'px', [pageWidth, pageHeight]);
-      pdf.addImage(base64image, 'JPEG', 3, 3); // margin left, margin top, width, height van doc
+
+      // Check for overflow
+      if (cv.scrollHeight > cv.clientHeight || cv.scrollWidth > cv.clientWidth) {
+        console.error("Div content overflows. Address overflow or adjust PDF size.");
+        return; // Prevent PDF creation if overflow exists
+      }
+
+      let pdf = new jsPDF('p', unit, [pageWidth, pageHeight]); // Set units consistently
+      pdf.addImage(base64image, 'JPEG', 0, 0); // No margins for full content (adjust margins if needed)
       pdf.save('pb-cv.pdf');
+      console.log("Calculated page height:", pageHeight);
     });
   });
 });
-console.log(pageWidth, pageHeight)
+
+console.log(pageWidth, pageHeight);
 
 // Generator form steps
 

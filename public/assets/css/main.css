@@ -481,6 +481,14 @@ textarea {
 /* template 2 */
 @import "template2.css";
 
+/* templates page */
+.template-imgs {
+    box-shadow:
+    -50px -50px 0 -40px var(--third-color),
+    50px 50px 0 -40px var(--third-color);
+}
+
+
 /* feedback page */
 
 .feedback-form {
