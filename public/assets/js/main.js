@@ -144,9 +144,12 @@ $('#change-template3').click(function () {
   $result.load('../../views/partials/template3.ejs');
 });
 
+
+// Generate the PDF
+
 let cv = document.querySelector('#div-to-print-pdf');
-let pageWidth = cv.clientWidth; // Assuming you want div's width
-let pageHeight = cv.clientHeight; // Assuming you want div's height
+let pageWidth = cv.clientWidth; // div's width
+let pageHeight = cv.clientHeight; // div's height
 
 // Unit check (adjust based on your default unit)
 let unit = 'px'; // Change to 'mm' or 'cm' if needed
@@ -155,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelector('#btn-one').addEventListener('click', function () {
     html2canvas(document.querySelector('#div-to-print-pdf')).then((canvas) => {
       function getDivHeight() {
-        // Consider adding padding/border if needed
+        // add padding if needed
         return cv.scrollHeight + parseInt(getComputedStyle(cv).paddingTop) + parseInt(getComputedStyle(cv).paddingBottom);
       }
       let pageHeight = getDivHeight();
