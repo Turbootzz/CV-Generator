@@ -26,6 +26,8 @@ app.use('/public/assets/img/icons', express.static(path.join(__dirname, '/node_m
 app.use('/public/assets/js', express.static(path.join(__dirname, '/node_modules/jquery/dist')));
 app.use('/public/assets/js', express.static(path.join(__dirname, '/node_modules/jquery.repeaster')));
 app.use('/public/assets/js', express.static(path.join(__dirname, '/node_modules/@emailjs/dist')));
+app.use('/public/assets/js', express.static(path.join(__dirname, '/node_modules/html2pdf.js/dist')));
+
 
 app.use(favicon(path.join(__dirname, '/public/assets/img', 'favicon.ico')));
 
@@ -48,6 +50,9 @@ app.get('/generator', function(req, res) {
 app.get('/generator2', function(req, res) {
     res.render(__dirname + '/public/views/generator2');
 });
+
+// generate pdf
+
 
 // feedback page
 app.get('/feedback', function(req, res) {

@@ -98,7 +98,7 @@ body {
 .middle-text-small {
     margin: auto;
     text-align: center;
-    padding: 120px 0;
+    padding: 91px 0;
     /* height */
 }
 
@@ -309,6 +309,9 @@ split-view {
 
 footer {
     background-color: var(--second-color);
+    /* position: absolute;
+    bottom: 0;
+    width: 100%; */
 }
 
 .copyright {
@@ -320,6 +323,16 @@ footer {
 }
 
 /* Generator page */
+
+/* the print has a small padding left because of the col so to prevent this in the download: */
+#div-to-print-pdf {
+    margin-left: -7px;
+}
+/* - */
+@page {
+    margin: 0;
+}
+
 .tab-rounded-top {
     border-radius: 25px 25px 0 0;
 }
