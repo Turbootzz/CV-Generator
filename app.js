@@ -51,9 +51,6 @@ app.get('/generator2', function(req, res) {
     res.render(__dirname + '/public/views/generator2');
 });
 
-// generate pdf
-
-
 // feedback page
 app.get('/feedback', function(req, res) {
     res.render(__dirname + '/public/views/feedback');
