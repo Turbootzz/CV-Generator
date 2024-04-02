@@ -1,0 +1,342 @@
+<%- include('partials/header'); %>
+<main class="container-fluid">
+    <div class="modal-body row">
+        <div class="col-lg-6">
+            <section id="about-sc" class="spaces-gen-page">
+                <div class="container">
+                    <div class="about-cnt">
+                        <form action="" class="cv-form" id="cv-form" method="GET">
+                            <div class="cv-form-blk tab">
+                                <div class="cv-form-row-title tab-rounded-top">
+                                    <h3>Over mij</h3>
+                                </div>
+                                <div class="cv-form-row cv-form-row-about tab-rounded-bottom">
+                                    <div class="cols-3">
+                                        <div class="form-elem">
+                                            <label for="" class="form-label">Voornaam:</label>
+                                            <!-- input-steps class for required -->
+                                            <input name="firstname" type="text" class="form-control firstname" id=""
+                                                onkeyup="generateCV()" placeholder="bijv. Henk" value="">
+                                            <span class="form-text"></span>
+                                        </div>
+                                        <div class="form-elem">
+                                            <label for="" class="form-label">Tussenvoegsel:</label>
+                                            <input name="middlename" type="text" class="form-control middlename" id=""
+                                                onkeyup="generateCV()" placeholder="bijv. van" value="">
+                                            <span class="form-text"></span>
+                                        </div>
+                                        <div class="form-elem">
+                                            <label for="" class="form-label">Achternaam:</label>
+                                            <input name="lastname" type="text" class="form-control lastname" id=""
+                                                onkeyup="generateCV()" placeholder="bijv. Plaus" value="">
+                                            <span class="form-text"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="cols-3">
+                                        <div class="form-elem">
+                                            <label for="" class="form-label">Een profielfoto:</label>
+                                            <input name="image" type="file" class="form-control image" id=""
+                                                accept="image/*" onchange="previewImage()">
+                                        </div>
+                                        <div class="form-elem">
+                                            <label for="" class="form-label">Wat ben je?</label>
+                                            <input name="designation" type="text" class="form-control designation" id=""
+                                                onkeyup="generateCV()" placeholder="bijv. Accountant">
+                                            <span class="form-text"></span>
+                                        </div>
+                                        <div class="form-elem">
+                                            <label for="" class="form-label">Adres:</label>
+                                            <input name="address" type="text" class="form-control address" id=""
+                                                onkeyup="generateCV()" placeholder="bijv. Steen 13, Houten">
+                                            <span class="form-text"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="cols-3">
+                                        <div class="form-elem">
+                                            <label for="" class="form-label">Email:</label>
+                                            <input name="email" type="text" class="form-control email" id=""
+                                                onkeyup="generateCV()" placeholder="bijv. henk@gmail.com">
+                                            <span class="form-text"></span>
+                                        </div>
+                                        <div class="form-elem">
+                                            <label for="" class="form-label">Telefoon nummer:</label>
+                                            <input name="phoneno" type="text" class="form-control phoneno" id=""
+                                                onkeyup="generateCV()" placeholder="bijv. 06 12345678, +31 6 12345678">
+                                            <span class="form-text"></span>
+                                        </div>
+                                        <div class="form-elem">
+                                            <label for="" class="form-label">Over jou:</label>
+                                            <input name="summary" type="text" class="form-control summary" id=""
+                                                onkeyup="generateCV()" placeholder="Ik hou van taart.">
+                                            <span class="form-text"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cv-form-blk tab">
+                                <div class="cv-form-row-title tab-rounded-top">
+                                    <h3>Behaalde doelen</h3>
+                                </div>
+
+                                <div class="row-separator repeater">
+                                    <div class="repeater" data-repeater-list="group-a">
+                                        <div data-repeater-item>
+                                            <div class="cv-form-row cv-form-row-achievement tab-rounded-bottom">
+                                                <div class="cols-2">
+                                                    <div class="form-elem">
+                                                        <label for="" class="form-label">Titel:</label>
+                                                        <input name="achieve_title" type="text"
+                                                            class="form-control achieve_title" id=""
+                                                            onkeyup="generateCV()"
+                                                            placeholder="Bijv. Geprogrammeerde robot">
+                                                        <span class="form-text"></span>
+                                                    </div>
+                                                    <div class="form-elem">
+                                                        <label for="" class="form-label">Beschrijving:</label>
+                                                        <input name="achieve_description" type="text"
+                                                            class="form-control achieve_description" id=""
+                                                            onkeyup="generateCV()"
+                                                            placeholder="Bijv. De robot kan schoonmaken">
+                                                        <span class="form-text"></span>
+                                                    </div>
+                                                </div>
+                                                <button data-repeater-delete type="button"
+                                                    class="repeater-remove-btn">-</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" data-repeater-create value="Add"
+                                        class="repeater-add-btn">+</button>
+                                </div>
+                            </div>
+
+                            <div class="cv-form-blk tab">
+                                <div class="cv-form-row-title tab-rounded-top">
+                                    <h3>Ervaring</h3>
+                                </div>
+
+                                <div class="row-separator repeater">
+                                    <div class="repeater" data-repeater-list="group-b">
+                                        <div data-repeater-item>
+                                            <div class="cv-form-row cv-form-row-experience tab-rounded-bottom">
+                                                <div class="cols-3">
+                                                    <div class="form-elem">
+                                                        <label for="" class="form-label">Titel</label>
+                                                        <input name="exp_title" type="text"
+                                                            class="form-control exp_title" id="" onkeyup="generateCV()">
+                                                        <span class="form-text"></span>
+                                                    </div>
+                                                    <div class="form-elem">
+                                                        <label for="" class="form-label">Bedrijf / Organizatie:</label>
+                                                        <input name="exp_organization" type="text"
+                                                            class="form-control exp_organization" id=""
+                                                            onkeyup="generateCV()">
+                                                        <span class="form-text"></span>
+                                                    </div>
+                                                    <div class="form-elem">
+                                                        <label for="" class="form-label">Locatie:</label>
+                                                        <input name="exp_location" type="text"
+                                                            class="form-control exp_location" id=""
+                                                            onkeyup="generateCV()">
+                                                        <span class="form-text"></span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="cols-2">
+                                                    <div class="form-elem">
+                                                        <label for="" class="form-label">Start Datum:</label>
+                                                        <input name="exp_start_date" type="date"
+                                                            class="form-control exp_start_date" id=""
+                                                            onkeyup="generateCV()">
+                                                        <span class="form-text"></span>
+                                                    </div>
+                                                    <div class="form-elem">
+                                                        <label for="" class="form-label">Eind Datum:</label>
+                                                        <input name="exp_end_date" type="date"
+                                                            class="form-control exp_end_date" id=""
+                                                            onkeyup="generateCV()">
+                                                        <span class="form-text"></span>
+                                                    </div>
+                                                    </div>
+                                                    <div class="cols-1">
+                                                    <div class="form-elem">
+                                                        <label for="" class="form-label">Beschrijving:</label>
+                                                        <input name="exp_description" type="text"
+                                                            class="form-control exp_description" id=""
+                                                            onkeyup="generateCV()">
+                                                        <span class="form-text"></span>
+                                                    </div>
+                                                </div>
+
+                                                <button data-repeater-delete type="button"
+                                                    class="repeater-remove-btn">-</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" data-repeater-create value="Add"
+                                        class="repeater-add-btn">+</button>
+                                </div>
+                            </div>
+
+                            <div class="cv-form-blk tab">
+                                <div class="cv-form-row-title tab-rounded-top">
+                                    <h3>Onderwijs</h3>
+                                </div>
+
+                                <div class="row-separator repeater">
+                                    <div class="repeater" data-repeater-list="group-c">
+                                        <div data-repeater-item>
+                                            <div class="cv-form-row cv-form-row-experience tab-rounded-bottom">
+                                                <div class="cols-3">
+                                                    <div class="form-elem">
+                                                        <label for="" class="form-label">School:</label>
+                                                        <input name="edu_school" type="text"
+                                                            class="form-control edu_school" id=""
+                                                            onkeyup="generateCV()">
+                                                        <span class="form-text"></span>
+                                                    </div>
+                                                    <div class="form-elem">
+                                                        <label for="" class="form-label">Opleiding:</label>
+                                                        <input name="edu_degree" type="text"
+                                                            class="form-control edu_degree" id=""
+                                                            onkeyup="generateCV()">
+                                                        <span class="form-text"></span>
+                                                    </div>
+                                                    <div class="form-elem">
+                                                        <label for="" class="form-label">Stad:</label>
+                                                        <input name="edu_city" type="text" class="form-control edu_city"
+                                                            id="" onkeyup="generateCV()">
+                                                        <span class="form-text"></span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="cols-2">
+                                                    <div class="form-elem">
+                                                        <label for="" class="form-label">Start Datum:</label>
+                                                        <input name="edu_start_date" type="date"
+                                                            class="form-control edu_start_date" id=""
+                                                            onkeyup="generateCV()">
+                                                        <span class="form-text"></span>
+                                                    </div>
+                                                    <div class="form-elem">
+                                                        <label for="" class="form-label">Eind Datum:</label>
+                                                        <input name="edu_graduation_date" type="date"
+                                                            class="form-control edu_graduation_date" id=""
+                                                            onkeyup="generateCV()">
+                                                        <span class="form-text"></span>
+                                                    </div>
+                                                    </div>
+                                                    <div class="cols-1">
+                                                    <div class="form-elem">
+                                                        <label for="" class="form-label">Beschrijving:</label>
+                                                        <input name="edu_description" type="text"
+                                                            class="form-control edu_description" id=""
+                                                            onkeyup="generateCV()">
+                                                        <span class="form-text"></span>
+                                                    </div>
+                                                </div>
+
+                                                <button data-repeater-delete type="button"
+                                                    class="repeater-remove-btn">-</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" data-repeater-create value="Add"
+                                        class="repeater-add-btn">+</button>
+                                </div>
+                            </div>
+
+                            <div class="cv-form-blk tab">
+                                <div class="cv-form-row-title tab-rounded-top">
+                                    <h3>Projecten</h3>
+                                </div>
+
+                                <div class="row-separator repeater">
+                                    <div class="repeater" data-repeater-list="group-d">
+                                        <div data-repeater-item>
+                                            <div class="cv-form-row cv-form-row-experience tab-rounded-bottom">
+                                                <div class="cols-1">
+                                                    <div class="form-elem">
+                                                        <label for="" class="form-label">Project Naam:</label>
+                                                        <input name="proj_title" type="text"
+                                                            class="form-control proj_title" id=""
+                                                            onkeyup="generateCV()">
+                                                        <span class="form-text"></span>
+                                                    </div>
+                                                    <div class="form-elem">
+                                                        <label for="" class="form-label">Beschrijving:</label>
+                                                        <input name="proj_description" type="text"
+                                                            class="form-control proj_description" id=""
+                                                            onkeyup="generateCV()">
+                                                        <span class="form-text"></span>
+                                                    </div>
+                                                    <div class="form-elem">
+                                                        <label for="" class="form-label">Project link:</label>
+                                                        <input name="proj_link" type="text"
+                                                            class="form-control proj_link" id="" onkeyup="generateCV()">
+                                                        <span class="form-text"></span>
+                                                    </div>
+                                                </div>
+                                                <button data-repeater-delete type="button"
+                                                    class="repeater-remove-btn">-</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" data-repeater-create value="Add"
+                                        class="repeater-add-btn">+</button>
+                                </div>
+                            </div>
+
+                            <div class="cv-form-blk tab">
+                                <div class="cv-form-row-title tab-rounded-top">
+                                    <h3>Skills <i type="button" tabindex="0" class="bi bi-question-circle" data-toggle="tooltip" data-placement="top" title="Met Skills bedoelen wij vaardigheden die u misschien hebt, bijvoorbeeld HTML of Computer Hardware."></i></h3>
+                                </div>
+
+                                <div class="row-separator repeater">
+                                    <div class="repeater" data-repeater-list="group-e">
+                                        <div data-repeater-item>
+                                            <div class="cv-form-row cv-form-row-skills tab-rounded-bottom">
+                                                <div class="form-elem">
+                                                    <label for="" class="form-label">Skill:</label>
+                                                    <input name="skill" type="text" class="form-control skill" id=""
+                                                        onkeyup="generateCV()">
+                                                    <span class="form-text"></span>
+                                                </div>
+
+                                                <button data-repeater-delete type="button"
+                                                    class="repeater-remove-btn">-</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" data-repeater-create value="Add"
+                                        class="repeater-add-btn">+</button>
+                                </div>
+                            </div>
+                            <div style="overflow:auto;">
+                                <div style="float:right;">
+                                  <button type="button" class="button-custom-sec" id="prevBtn" onclick="nextPrev(-1)">Vorige</button>
+                                  <button type="button" class="button-custom-sec" id="nextBtn" onclick="nextPrev(1)">Volgende</button>
+                                </div>
+                              </div>
+                            <div style="text-align:center;margin-top:40px;">
+                                <span class="step"></span>
+                                <span class="step"></span>
+                                <span class="step"></span>
+                                <span class="step"></span>
+                                <span class="step"></span>
+                              </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="spaces-gen-page col col-lg-6">
+            <section id="result div-to-print">
+                <%- include ("partials/template2.ejs"); %>
+            </section>
+            <br>
+            <button id="download-pdf-button" class="btn btn-success btn-lg">Download als PDF</button>
+    <%- include('partials/footer'); %>
