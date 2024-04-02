@@ -68,8 +68,8 @@
                                         </div>
                                         <div class="form-elem">
                                             <label for="" class="form-label">Over jou:</label>
-                                            <input name="summary" type="text" class="form-control summary" id=""
-                                                onkeyup="generateCV()" placeholder="Ik hou van taart.">
+                                            <textarea name="summary" type="range" class="form-control summary" id=""
+                                                onkeyup="generateCV()" placeholder="Ik hou van taart." rows="2" cols="50"></textarea>
                                             <span class="form-text"></span>
                                         </div>
                                     </div>
@@ -335,7 +335,7 @@
         </div>
         <div class="spaces-gen-page col col-lg-6">
             <section id="result div-to-print">
-                <%- include ("partials/template2.ejs"); %>
+                <%- include ("partials/template3.ejs"); %>
             </section>
             <br>
             <button id="download-pdf-button" class="btn btn-success btn-lg">Download als PDF</button>

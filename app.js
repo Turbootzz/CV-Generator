@@ -51,6 +51,11 @@ app.get('/generator2', function(req, res) {
     res.render(__dirname + '/public/views/generator2');
 });
 
+// generator3 page
+app.get('/generator3', function(req, res) {
+    res.render(__dirname + '/public/views/generator3');
+});
+
 // feedback page
 app.get('/feedback', function(req, res) {
     res.render(__dirname + '/public/views/feedback');
