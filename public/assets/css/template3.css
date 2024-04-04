@@ -3,7 +3,7 @@
 :root {
     --cv-main: rgb(236, 236, 236);
     --cv-second: rgb(50, 50, 50);
-    --cv-side: rgb(230, 230, 230);
+    --cv-side: rgb(229, 232, 234);
     --cv-font: "Nunito", sans-serif;
 }
 
@@ -23,7 +23,7 @@
     border-radius: 5px;
     display: grid;
     grid-template-columns: auto 32%;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(69, 113, 156, 0.2) 0px 8px 24px;
     /* overflow: hidden; */
     background-color: var(--cv-side);
     font-family: var(--cv-font);
@@ -31,9 +31,8 @@
 }
 
 .preview-cnt-l{
-    /* padding: 1rem 3rem 2rem 3rem; */
     background-color: var(--cv-main);
-    padding: 5rem 2rem 4rem 2rem;
+    padding: 5rem 2rem 4rem 0;
 }
 .preview-cnt-r{
     padding: 5rem 1rem 4rem 2rem;
@@ -43,11 +42,11 @@
 }
 .preview-image{
     margin-top: -135px;
+    padding-left: 5px;
+    padding-right: 15px;
     width: 100%;
-    height: 220px;
+    height: 320px;
     overflow: hidden;
-    /* margin-right: auto;
-    margin-left: auto; */
 }
 .preview-image img{
     width: 100%;
@@ -63,16 +62,15 @@
     padding-left: 3rem;
 }
 
-/* .name-over-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-} */
-
-/* margins and centers */
-/* .preview-item {
-    margin: auto;
-} */
+/* makes sure the text from the input doesnt overlap the div */
+.text-area {
+    display: flex;
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+    white-space: normal;
+    word-wrap: break-word;
+}
 
 /* underline title but not needed for this template */
 .preview-item-name::after{
@@ -81,7 +79,7 @@
     bottom: -10px;
     width: 60%;
     height: 0.8px;
-    background-color: rgb(154, 154, 154);
+    background-color: rgb(0, 0, 0);
     left: 5%;
 }
 
@@ -114,13 +112,13 @@
 .preview-blk-title h3{
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    border-bottom: 0.5px solid rgba(0, 0, 0, 0.08);
+    /* border-bottom: 0.5px solid rgba(0, 0, 0, 0.08); */
     padding-bottom: 0.5rem;
     padding-top: 9px;
     background-color: var(--cv-side);
     color: var(--cv-main);
     font-size: 1.4rem;
-    color: black;
+    color: rgb(5, 34, 68);
 }
 .preview-blk-title{
     margin-bottom: 1rem;
@@ -184,9 +182,6 @@
     opacity: 0.8;
     margin-top: 1rem;
 }
-/* .projects-items.preview-blk-list .preview-item span{
-    display: block;
-} */
 
 @media screen and (min-width: 768px){
     .cols-3{
