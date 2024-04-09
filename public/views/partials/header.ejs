@@ -15,7 +15,12 @@
 			referrerpolicy="no-referrer">
     </script>
     <script src="/public/assets/js/jquery.js"></script>
-    <script src="/public/assets/js/html2pdf.bundle.min.js"></script>
+    <script src="/public/assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $(document).ready(function() { // tooltips for bootstrap
+        $("body").tooltip({ selector: '[data-toggle=tooltip]' });
+    });
+  </script>
 </head>
 <body>
     <header>
@@ -32,7 +37,6 @@
                   <li class="nav-item">
                     <a class="nav-link nav-text" href="templates">Generator</a>
                   </li>
-                  <!-- demo -->
                   <li class="nav-item">
                     <a class="nav-link nav-text" href="feedback">Feedback</a>
                   </li>

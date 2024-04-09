@@ -41,17 +41,13 @@ app.get('/templates', function(req, res) {
     res.render(__dirname + '/public/views/templates');
 });
 
-// generator page
+// generator pages
 app.get('/generator', function(req, res) {
     res.render(__dirname + '/public/views/generator');
 });
-
-// generator2 page
 app.get('/generator2', function(req, res) {
     res.render(__dirname + '/public/views/generator2');
 });
-
-// generator3 page
 app.get('/generator3', function(req, res) {
     res.render(__dirname + '/public/views/generator3');
 });
@@ -60,10 +56,6 @@ app.get('/generator3', function(req, res) {
 app.get('/feedback', function(req, res) {
     res.render(__dirname + '/public/views/feedback');
 });
-// app.post('/feedback', upload.any(), function (req, res) {
-//     console.log(req.body); // Text input
-//     console.log(req.files); // Metadata about uploaded files (if any)
-// });
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
@@ -78,3 +70,5 @@ app.use((req, res) => {
 app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}`);
 });
+
+// note: if you plan on changing the footer make sure you change the file: footer.ejs, 404.ejs and templates.ejs
