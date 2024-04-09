@@ -131,7 +131,7 @@ function reloadJs(src) {
   $('<script/>').attr('src', src).appendTo('head');
 }
 
-// choose template
+// choose template (not in use)
 var $result = $('#result');
 $('#change-template1').click(function () {
   $result.load('../../views/partials/template1.ejs');
@@ -147,45 +147,11 @@ $('#change-template3').click(function () {
 
 // Generate the PDF
 
-// let cv = document.querySelector('#div-to-print-pdf');
-// let pageWidth = cv.clientWidth; // div's width
-// let pageHeight = cv.clientHeight; // div's height
-
-// // Unit check (adjust based on your default unit)
-// let unit = 'px'; // Change to 'mm' or 'cm' if needed
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   document.querySelector('#btn-one').addEventListener('click', function () {
-//     html2canvas(document.querySelector('#div-to-print-pdf'), { scale: 0.5 }).then((canvas) => {
-//       function getDivHeight() {
-//         // add padding if needed
-//         return cv.scrollHeight + parseInt(getComputedStyle(cv).paddingTop) + parseInt(getComputedStyle(cv).paddingBottom);
-//       }
-//       let pageHeight = getDivHeight();
-//       let base64image = canvas.toDataURL('image/jpeg');
-
-//       // Check for overflow
-//       if (cv.scrollHeight > cv.clientHeight || cv.scrollWidth > cv.clientWidth) {
-//         console.error("Div content overflows. Address overflow or adjust PDF size.");
-//         return; // Prevent PDF creation if overflow exists
-//       }
-
-//       let pdf = new jsPDF('p', unit, [pageWidth, pageHeight]); // Set units consistently
-//       pdf.setMargins(0, 0, 0); // Set all margins to 0
-//       pdf.addImage(base64image, 'JPEG', 0, 0); // No margins for full content (adjust margins if needed)
-//       pdf.save('pb-cv.pdf');
-//       console.log("Calculated page height:", pageHeight);
-//     });
-//   });
-// });
-
-// console.log(pageWidth, pageHeight);
-
-// ----
 document.addEventListener('DOMContentLoaded', function() {
 $('#download-pdf-button').click(function() {
   const element = document.getElementById('div-to-print-pdf');
-  html2pdf(element, {margin: [0, 0, 0, 0] }).save();
+  html2pdf(element, {margin: [0, 0, 0, 0] });
+  doc.save('People Business CV.pdf');
   console.log("PDF gemaakt.")
 });
 });

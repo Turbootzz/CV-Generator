@@ -17,6 +17,7 @@
     text-align: left;
     font-family: var(--cv-font);
     font-optical-sizing: auto;
+    margin-left: -2px;
 }
 
 .preview-cnt{
@@ -32,10 +33,10 @@
 
 .preview-cnt-l{
     background-color: var(--cv-main);
-    padding: 5rem 2rem 4rem 0;
+    padding: 5rem 2rem 2rem 0;
 }
 .preview-cnt-r{
-    padding: 5rem 1rem 4rem 2rem;
+    padding: 5rem 1rem 2rem 2rem;
 }
 .preview-cnt-l .preview-blk:nth-child(1){
     text-align: center;

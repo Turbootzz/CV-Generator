@@ -232,10 +232,67 @@ function printCV(){
 // template1
 function btnRed() {
     document.getElementsByClassName('preview-cnt-l')[0]
-            .style.backgroundColor = 'darkred';
+            .style.backgroundColor = 'var(--clr-red)';
         }
-
+        
 function btnBlue() {
     document.getElementsByClassName('preview-cnt-l')[0]
             .style.backgroundColor = 'var(--second-color)';
         }
+
+function btnGrey() {
+    document.getElementsByClassName('preview-cnt-l')[0]
+            .style.backgroundColor = 'var(--clr-grey)';
+        }
+
+function btnGreen() {
+    document.getElementsByClassName('preview-cnt-l')[0]
+            .style.backgroundColor = 'var(--clr-green-prim)';
+        }
+    
+function btnFontDefault() {
+    document.getElementsByClassName('preview-cnt')[0].style.cssText = `
+    font-family: 'Open Sans', sans-serif;
+  `;
+}
+    
+function btnFontRoboto() {
+    document.getElementsByClassName('preview-cnt')[0].style.cssText = `
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+  `;
+}
+function btnFontRaleway() {
+    document.getElementsByClassName('preview-cnt')[0].style.cssText = `
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  `;
+}
+function btnFontRobotoSlab() {
+    document.getElementsByClassName('preview-cnt')[0].style.cssText = `
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  `;
+}
+
+// in jquery call function from select values
+$('#font-choose').on('change', function() {
+    
+    if ( $('#font-choose').val() == 'btnFontDefault' ) btnFontDefault();
+    else if ( $('#font-choose').val() == 'btnFontRoboto' ) btnFontRoboto();
+    else if ( $('#font-choose').val() == 'btnFontRaleway' ) btnFontRaleway();
+    else if ( $('#font-choose').val() == 'btnFontRobotoSlab' ) btnFontRobotoSlab();
+  });
+
+  $('#color-choose').on('change', function() {
+    
+    if ( $('#color-choose').val() == 'btnBlue' ) btnBlue();
+    else if ( $('#color-choose').val() == 'btnRed' ) btnRed();
+    else if ( $('#color-choose').val() == 'btnGrey' ) btnGrey();
+    else if ( $('#color-choose').val() == 'btnGreen' ) btnGreen();
+  });

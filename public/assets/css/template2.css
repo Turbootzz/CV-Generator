@@ -16,6 +16,7 @@
     background-color: var(--cv-main);
     font-family: "Nunito", sans-serif;
     font-optical-sizing: auto;
+    margin-left: -2px;
 }
 
 .preview-cnt-l{
