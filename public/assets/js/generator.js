@@ -229,7 +229,7 @@ function printCV(){
 
 // cv changes
 
-// template1
+// templates colors
 function btnRed() {
     document.getElementsByClassName('preview-cnt-l')[0]
             .style.backgroundColor = 'var(--clr-red)';
@@ -250,12 +250,35 @@ function btnGreen() {
             .style.backgroundColor = 'var(--clr-green-prim)';
         }
     
+// templates colors for template3
+function btnRed() {
+    document.getElementsByClassName('top-section-template')[0]
+            .style.backgroundColor = 'var(--clr-red)';
+        }
+function btnBlue() {
+    document.getElementsByClassName('top-section-template')[0]
+            .style.backgroundColor = 'var(--second-color)';
+        }
+function btnGrey() {
+    document.getElementsByClassName('top-section-template')[0]
+            .style.backgroundColor = 'var(--clr-grey)';
+        }
+function btnGreen() {
+    document.getElementsByClassName('top-section-template')[0]
+            .style.backgroundColor = 'var(--clr-green-prim)';
+        }
+
 function btnFontDefault() {
     document.getElementsByClassName('preview-cnt')[0].style.cssText = `
     font-family: 'Open Sans', sans-serif;
   `;
 }
-    
+function btnFontNunito() {
+    document.getElementsByClassName('preview-cnt')[0].style.cssText = `
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+  `;
+}
 function btnFontRoboto() {
     document.getElementsByClassName('preview-cnt')[0].style.cssText = `
     font-weight: 300;
@@ -287,6 +310,7 @@ $('#font-choose').on('change', function() {
     else if ( $('#font-choose').val() == 'btnFontRoboto' ) btnFontRoboto();
     else if ( $('#font-choose').val() == 'btnFontRaleway' ) btnFontRaleway();
     else if ( $('#font-choose').val() == 'btnFontRobotoSlab' ) btnFontRobotoSlab();
+    else if ( $('#font-choose').val() == 'btnFontNunito' ) btnFontNunito();
   });
 
   $('#color-choose').on('change', function() {

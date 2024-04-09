@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-
 :root {
     --cv-main: rgb(236, 236, 236);
     --cv-second: rgb(50, 50, 50);
@@ -8,7 +6,7 @@
 }
 
 /* preview section */
-#top-section-template {
+.top-section-template {
     display: grid;
     grid-template-columns: auto;
     /* grid-template-rows: auto 1fr; */
@@ -92,6 +90,7 @@
 /* space right gives icons some padding to the right */
 .space-r {
     padding-right: 0.4rem;
+    margin-left: -1rem;
 }
 
 #preview-blk-designation {
