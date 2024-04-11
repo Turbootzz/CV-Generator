@@ -150,8 +150,8 @@ $('#change-template3').click(function () {
 document.addEventListener('DOMContentLoaded', function() {
 $('#download-pdf-button').click(function() {
   const element = document.getElementById('div-to-print-pdf');
-  html2pdf(element, {margin: [0, 0, 0, 0] });
-  doc.save('People Business CV.pdf');
+  html2pdf(element, {margin: [0, 0, 0, 0]});
+  // doc.save('People Business CV.pdf');
   console.log("PDF gemaakt.")
 });
 });
