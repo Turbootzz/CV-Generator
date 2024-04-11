@@ -1,3 +1,6 @@
+// Made by Thijs Herman
+// Contact me at: tc.herman@hotmail.com
+
 // slider splitview
 let tmpl = document.createElement("template");
 tmpl.innerHTML = `

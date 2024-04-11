@@ -1,3 +1,6 @@
+// Made by Thijs Herman
+// Contact me at: tc.herman@hotmail.com
+
 const express = require("express");
 const path = require("path");
 // require(dotenv).config({ path: __dirname + '/.env'});
